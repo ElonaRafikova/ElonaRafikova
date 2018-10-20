@@ -1,11 +1,12 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="Suite1" verbose="1" >
-    <test name="Nopackage" >
+<suite name="Test Suite" verbose="1">
+    <test name="Simple Test">
+
+
         <classes>
-            <class name="lession1.SimpleTest" />
+            <class name="hw1.SimpleTest"/>
         </classes>
+
     </test>
-
-
 </suite>
