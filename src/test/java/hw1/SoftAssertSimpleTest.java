@@ -20,7 +20,6 @@ public class SoftAssertSimpleTest {
         setProperty("webdriver.chrome.driver", "src\\main\\resources\\chromedriver.exe");
         SoftAssert softAssert = new SoftAssert();
 
-
         //0 Prepare driver
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();

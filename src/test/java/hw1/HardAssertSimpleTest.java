@@ -17,6 +17,7 @@ public class HardAssertSimpleTest {
 
     @Test
     public void simpleTest() {
+        
         setProperty("webdriver.chrome.driver", "src\\main\\resources\\chromedriver.exe");
 
         //0 Prepare driver
