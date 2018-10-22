@@ -69,7 +69,10 @@ public class SoftAssertSimpleTest {
         softAssert.assertEquals(textsUnderIcons.get(0).getText(), "To include good practices\nand ideas from successful\nEPAM project");
         softAssert.assertEquals(textsUnderIcons.get(1).getText(), "To be flexible and\ncustomizable");
         softAssert.assertEquals(textsUnderIcons.get(2).getText(), "To be multiplatform");
-        softAssert.assertEquals(textsUnderIcons.get(3).getText(), "Already have good base\n(about 20 internal and\nsome external projects),\nwish to get more…");
+        softAssert.assertEquals(textsUnderIcons.get(3).getText(), "Already have good base\n" +
+                "(about 20 internal and\n" +
+                "some external projects),\n" +
+                "wish to get more…");
 
         //9 Assert a text of the main header
         //main header
@@ -79,7 +82,10 @@ public class SoftAssertSimpleTest {
         //main text
         WebElement mainText = driver.findElement(By.cssSelector(".main-txt.text-center"));
         softAssert.assertTrue(mainText.isDisplayed());
-        softAssert.assertEquals(mainText.getText(), "LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISICING ELIT, SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA. UT ENIM AD MINIM VENIAM, QUIS NOSTRUD EXERCITATION ULLAMCO LABORIS NISI UT ALIQUIP EX EA COMMODO CONSEQUAT DUIS AUTE IRURE DOLOR IN REPREHENDERIT IN VOLUPTATE VELIT ESSE CILLUM DOLORE EU FUGIAT NULLA PARIATUR.");
+        softAssert.assertEquals(mainText.getText(), "LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISICING ELIT," +
+                " SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA. UT ENIM AD MINIM VENIAM," +
+                " QUIS NOSTRUD EXERCITATION ULLAMCO LABORIS NISI UT ALIQUIP EX EA COMMODO CONSEQUAT DUIS AUTE IRURE" +
+                " DOLOR IN REPREHENDERIT IN VOLUPTATE VELIT ESSE CILLUM DOLORE EU FUGIAT NULLA PARIATUR.");
 
         //10 Assert that there is the iframe in the center of page
         WebElement iFrame = driver.findElement(By.cssSelector("[id=iframe]"));
