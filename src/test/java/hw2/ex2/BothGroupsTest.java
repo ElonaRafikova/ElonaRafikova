@@ -14,7 +14,7 @@ import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 public class BothGroupsTest {
-    @Test(groups = {"Regression","Smoke"})
+    @Test(groups = {"Regression", "Smoke"})
     public void firstTest() {
 
         setProperty("webdriver.chrome.driver", "src\\main\\resources\\chromedriver.exe");
@@ -117,7 +117,8 @@ public class BothGroupsTest {
         //17 Close Browser
         driver.close();
     }
-    @Test(groups = {"Regression","Smoke"})
+
+    @Test(groups = {"Regression", "Smoke"})
     public void secondTest() {
 
         setProperty("webdriver.chrome.driver", "src\\main\\resources\\chromedriver.exe");
@@ -220,7 +221,8 @@ public class BothGroupsTest {
         //17 Close Browser
         driver.close();
     }
-    @Test(groups = {"Regression","Smoke"})
+
+    @Test(groups = {"Regression", "Smoke"})
     public void thirdTest() {
 
         setProperty("webdriver.chrome.driver", "src\\main\\resources\\chromedriver.exe");

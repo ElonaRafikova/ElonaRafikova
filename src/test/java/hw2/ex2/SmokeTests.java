@@ -117,6 +117,7 @@ public class SmokeTests {
         //17 Close Browser
         driver.close();
     }
+
     @Test(groups = "Smoke")
     public void secondTest() {
 
@@ -220,6 +221,7 @@ public class SmokeTests {
         //17 Close Browser
         driver.close();
     }
+
     @Test(groups = "Smoke")
     public void thirdTest() {
 

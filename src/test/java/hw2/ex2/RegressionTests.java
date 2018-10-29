@@ -117,6 +117,7 @@ public class RegressionTests {
         //17 Close Browser
         driver.close();
     }
+
     @Test(groups = "Regression")
     public void secondTest() {
 
@@ -220,6 +221,7 @@ public class RegressionTests {
         //17 Close Browser
         driver.close();
     }
+
     @Test(groups = "Regression")
     public void thirdTest() {
 

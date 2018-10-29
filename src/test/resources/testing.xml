@@ -5,7 +5,7 @@
 
 
         <classes>
-            <class name="hw1.SimpleTest"/>
+            <class name="hw1.HardAssertSimpleTest"/>
         </classes>
 
     </test>
