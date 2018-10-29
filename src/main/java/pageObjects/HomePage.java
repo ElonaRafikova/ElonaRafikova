@@ -7,7 +7,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import java.util.List;
-
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
