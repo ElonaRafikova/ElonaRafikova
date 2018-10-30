@@ -7,6 +7,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import java.util.List;
+
+import static enums.HeaderSections.*;
+import static enums.TextsUnderIcons.*;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
@@ -101,10 +104,10 @@ public class HomePage {
 
     public void checkNavigationElements() {
         assertEquals(navigationElements.size(), 4);
-        assertEquals(navigationElements.get(0).getText(), HeaderSections.HOME.title);
-        assertEquals(navigationElements.get(1).getText(), HeaderSections.CONTACT_FORM.title);
-        assertEquals(navigationElements.get(2).getText(), HeaderSections.SERVICE.title);
-        assertEquals(navigationElements.get(3).getText(), HeaderSections.METALS_COLORS.title);
+        assertEquals(navigationElements.get(0).getText(), HOME.title);
+        assertEquals(navigationElements.get(1).getText(), CONTACT_FORM.title);
+        assertEquals(navigationElements.get(2).getText(), SERVICE.title);
+        assertEquals(navigationElements.get(3).getText(), METALS_COLORS.title);
     }
 
     public void checkImages() {
@@ -116,10 +119,10 @@ public class HomePage {
 
     public void checkTextUnderImages() {
         assertEquals(textsUnderIcons.size(), 4);
-        assertEquals(textsUnderIcons.get(0).getText(), TextsUnderIcons.GOOD_PRACTICES.text);
-        assertEquals(textsUnderIcons.get(1).getText(), TextsUnderIcons.FLEXIBLE.text);
-        assertEquals(textsUnderIcons.get(2).getText(), TextsUnderIcons.MULTIPLATFORM.text);
-        assertEquals(textsUnderIcons.get(3).getText(), TextsUnderIcons.GOOD_BASE.text);
+        assertEquals(textsUnderIcons.get(0).getText(), GOOD_PRACTICES.text);
+        assertEquals(textsUnderIcons.get(1).getText(), FLEXIBLE.text);
+        assertEquals(textsUnderIcons.get(2).getText(), MULTIPLATFORM.text);
+        assertEquals(textsUnderIcons.get(3).getText(), GOOD_BASE.text);
     }
 
     public void checkMainHeader() {
