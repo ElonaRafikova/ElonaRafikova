@@ -12,5 +12,5 @@ public enum HeaderSections {
     HeaderSections(String title) {
         this.title = title;
     }
-    
+
 }
