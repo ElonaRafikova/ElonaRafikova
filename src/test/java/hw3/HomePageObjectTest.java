@@ -9,11 +9,12 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pageObjects.HomePage;
+
 import java.util.concurrent.TimeUnit;
 
 import static enums.Users.PITER_CHAILOVSKII;
 
-public class PageObjectTest extends TestBase {
+public class HomePageObjectTest extends TestBase {
 
     private WebDriver driver;
     private HomePage homePage;
@@ -36,7 +37,7 @@ public class PageObjectTest extends TestBase {
     }
 
     @Test
-    public void simpleTest() {
+    public void homePageObjectTest() {
 
         //1 Open test site by URL
         homePage.open(driver);

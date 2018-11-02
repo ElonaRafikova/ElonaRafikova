@@ -1,7 +1,5 @@
 package pageObjects;
 
-import enums.HeaderSections;
-import enums.TextsUnderIcons;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -17,13 +15,13 @@ public class HomePage {
 
     private final String homePageUrl = "https://epam.github.io/JDI/";
     private final String homePageBrowserTitle = "Home Page";
-    private String mainHeaderText = "EPAM FRAMEWORK WISHES…";
-    private String underMainHeaderText = "LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISICING ELIT," +
+    private final String mainHeaderText = "EPAM FRAMEWORK WISHES…";
+    private final String underMainHeaderText = "LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISICING ELIT," +
             " SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA. UT ENIM AD MINIM VENIAM," +
             " QUIS NOSTRUD EXERCITATION ULLAMCO LABORIS NISI UT ALIQUIP EX EA COMMODO CONSEQUAT DUIS AUTE IRURE" +
             " DOLOR IN REPREHENDERIT IN VOLUPTATE VELIT ESSE CILLUM DOLORE EU FUGIAT NULLA PARIATUR.";
-    private String subHeaderText = "JDI GITHUB";
-    private String subHeaderUrl = "https://github.com/epam/JDI";
+    private final String subHeaderText = "JDI GITHUB";
+    private final String subHeaderUrl = "https://github.com/epam/JDI";
 
     @FindBy(css = ".profile-photo")
     private WebElement profileButton;
