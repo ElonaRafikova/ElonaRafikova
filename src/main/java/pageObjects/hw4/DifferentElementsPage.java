@@ -14,13 +14,12 @@ import java.util.Collections;
 import java.util.List;
 
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
-import static enums.Colors.getCategory;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 public class DifferentElementsPage {
 
-    private String differentElementsPageBrowserTitle = "Different Elements";
+    private final String differentElementsPageBrowserTitle = "Different Elements";
 
     @FindBy(css = "ul.uui-navigation.nav > li")
     private List<WebElement> navigationElements;

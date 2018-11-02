@@ -3,7 +3,6 @@ package pageObjects.hw4;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
-import jdk.nashorn.api.scripting.ScriptObjectMirror;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
@@ -14,7 +13,7 @@ import static org.testng.Assert.assertTrue;
 
 public class DatesPage {
 
-    private String differentElementsPageBrowserTitle = "Dates";
+    private final String differentElementsPageBrowserTitle = "Dates";
 
     @FindBy(css = ".ui-slider-handle.ui-state-default.ui-corner-all")
     private ElementsCollection sliders;
@@ -26,9 +25,9 @@ public class DatesPage {
     private ElementsCollection logRecords;
 
     private boolean fromActive = true;
-    private static final int STEPS = 100;
-    private static final int MIN_STEP = 0;
-    private static final int MAX_STEP = 100;
+    private final int STEPS = 100;
+    private final int MIN_STEP = 0;
+    private final int MAX_STEP = 100;
 
 
     //================================methods===================================

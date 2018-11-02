@@ -23,7 +23,7 @@ public class DataPageSlidersTest extends SelenideTestBase {
     }
 
     @Test
-    public void simpleTest() {
+    public void dataPageSlidersTest() {
 
         //1 Open test site by URL
         homePage.openPage();

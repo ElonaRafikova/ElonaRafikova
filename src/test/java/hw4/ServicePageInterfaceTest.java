@@ -13,7 +13,7 @@ import static enums.CheckBoxes.WATER;
 import static enums.CheckBoxes.WIND;
 import static enums.Colors.YELLOW;
 import static enums.RadioButtons.SELEN;
-import static enums.ServiceDropDowns.*;
+import static enums.ServiceDropDowns.DIFFERENT_ELEMENTS;
 import static enums.Users.PITER_CHAILOVSKII;
 
 public class ServicePageInterfaceTest extends SelenideTestBase {
@@ -24,11 +24,11 @@ public class ServicePageInterfaceTest extends SelenideTestBase {
     @BeforeClass
     public void beforeClass() {
         homePage = page(HomePageSelenide.class);
-        differentElementsPage=page(DifferentElementsPage.class);
+        differentElementsPage = page(DifferentElementsPage.class);
     }
 
     @Test
-    public void simpleTest() {
+    public void servicePageInterfaceTest() {
 
         //1 Open test site by URL
         homePage.openPage();
@@ -65,29 +65,29 @@ public class ServicePageInterfaceTest extends SelenideTestBase {
         differentElementsPage.checkLeftSectionExist();
 
         //11 Select checkboxes
-        differentElementsPage.selectCheckBox(WATER,WIND);
-        differentElementsPage.checkCheckBoxChecked(true,WATER,WIND);
+        differentElementsPage.selectCheckBox(WATER, WIND);
+        differentElementsPage.checkCheckBoxChecked(true, WATER, WIND);
 
         //12 Assert that for each checkbox there is an individual log row and value is corresponded to the status of checkbox.
-        differentElementsPage.checkLogCheckBox(true,WATER,WIND);
+        differentElementsPage.checkLogCheckBox(true, WATER, WIND);
 
         //13 Select radio
         differentElementsPage.selectRadioButton(SELEN);
-        differentElementsPage.checkRadioButtonChecked(true,SELEN);
+        differentElementsPage.checkRadioButtonChecked(true, SELEN);
 
         //14 Assert that for radiobutton there is a log row and value is corresponded to the status of radiobutton.
         differentElementsPage.checkLogRadio(SELEN);
 
         //15 Select in dropdown
         differentElementsPage.selectInDropDown(YELLOW);
-        differentElementsPage.checkDropDownSelected(true,YELLOW);
+        differentElementsPage.checkDropDownSelected(true, YELLOW);
 
         //16 Assert that for dropdown there is a log row and value is corresponded to the selected value. 
-        differentElementsPage.checkLogDropDown(true,YELLOW);
+        differentElementsPage.checkLogDropDown(true, YELLOW);
 
         //17 Unselect and assert checkboxes
-        differentElementsPage.selectCheckBox(WATER,WIND);
-        differentElementsPage.checkCheckBoxChecked(false,WATER,WIND);
+        differentElementsPage.selectCheckBox(WATER, WIND);
+        differentElementsPage.checkCheckBoxChecked(false, WATER, WIND);
 
         //18 Assert that for each checkbox there is an individual log row and value is corresponded to the status of checkbox. 
         differentElementsPage.checkLogCheckBox(false, WATER, WIND);
