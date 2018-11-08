@@ -61,6 +61,7 @@ public class HomePageAllure {
         assertEquals(getWebDriver().getTitle(), homePageBrowserTitle);
     }
 
+    @Step
     public void login(Users user) {
         profileButton.click();
         login.sendKeys(user.login);
