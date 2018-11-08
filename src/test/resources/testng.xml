@@ -3,7 +3,7 @@
 <suite name="Test Suite" verbose="1">
     <test name="Simple Test">
         <classes>
-            <class name="hw5.ServicePageTestAllure"/>
+            <class name="hw4.ServicePageInterfaceTest"/>
         </classes>
 
     </test>
