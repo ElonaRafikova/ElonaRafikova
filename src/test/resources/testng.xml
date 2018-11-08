@@ -2,10 +2,8 @@
 
 <suite name="Test Suite" verbose="1">
     <test name="Simple Test">
-
-
         <classes>
-            <class name="hw1.HardAssertSimpleTest"/>
+            <class name="hw5.ServicePageTestAllure"/>
         </classes>
 
     </test>
