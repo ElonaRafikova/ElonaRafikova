@@ -32,10 +32,10 @@ public class MetalAndColorsTest extends TestBase {
         metalAndColorsPage.checkOpened();
 
         //3 Fill form Metals & Colors by data
-        metalAndColorsPage.fill(data);
+        metalAndColorsPage.metalAndColorsForm.fill(data);
 
         //Submit form Metals & Colors
-        metalAndColorsPage.submit();
+        metalAndColorsPage.metalAndColorsForm.submit();
 
         //4 Result sections should contains data
         metalAndColorsPage.checkFilled(data);
