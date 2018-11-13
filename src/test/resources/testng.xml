@@ -4,6 +4,8 @@
     <test name="Service Page Test Allure ">
         <classes>
             <class name="hw5.ServicePageTestAllure"/>
+            <class name="hw4.ServicePageInterfaceTest"/>
+            <class name="hw4.DataPageSlidersTest"/>
         </classes>
 
     </test>

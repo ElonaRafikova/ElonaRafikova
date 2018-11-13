@@ -5,6 +5,7 @@ import enums.HeaderSections;
 import enums.LeftSections;
 import enums.ServiceDropDowns;
 import enums.Users;
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -47,16 +48,20 @@ public class HomePageSelenide {
     @FindBy(css = ".sidebar-menu .menu-title [class = 'sub'] li > a")
     private ElementsCollection serviceLeftDropDownElements;
 
+
     //================================methods===================================
 
+    @Step
     public void openPage() {
         open(homePageUrl);
     }
 
+    @Step
     public void checkBrowserTitle() {
         assertEquals(getWebDriver().getTitle(), homePageBrowserTitle);
     }
 
+    @Step
     public void login(Users user) {
         profileButton.click();
         login.sendKeys(user.login);
@@ -64,32 +69,38 @@ public class HomePageSelenide {
         submit.click();
     }
 
+
+    @Step
     public void clickOnHeader(HeaderSections section) {
         navigationElements.get(section.ordinal()).click();
     }
 
+    @Step
     public void clickOnLeftSection(LeftSections section) {
         leftDropDownElements.get(section.ordinal()).click();
     }
 
     //================================checks===================================
 
+    @Step
     public void checkUserName(Users user) {
         assertTrue(profileButton.isDisplayed());
         assertEquals(profileButton.getText(), user.name);
     }
 
+    @Step
     public void checkHeaderServiceDropDown() {
         serviceHeaderDropDownElements.shouldHaveSize(getServiceDropDownsTitlesUpper().size());
         serviceHeaderDropDownElements.shouldHave(exactTexts(getServiceDropDownsTitlesUpper()));
     }
 
+    @Step
     public void checkLeftServiceDropDown() {
         serviceLeftDropDownElements.shouldHaveSize(getServiceDropDownsTitles().size());
         serviceLeftDropDownElements.shouldHave(exactTexts(getServiceDropDownsTitles()));
     }
 
-
+    @Step
     public void chooseServiceOption(ServiceDropDowns option) {
         serviceHeaderDropDownElements.get(option.ordinal()).click();
     }

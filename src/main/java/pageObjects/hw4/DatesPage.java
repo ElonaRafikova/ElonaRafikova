@@ -3,6 +3,7 @@ package pageObjects.hw4;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
+import io.qameta.allure.Step;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
@@ -32,16 +33,19 @@ public class DatesPage {
 
     //================================methods===================================
 
+    @Step
     private Double getStep() {
         return (double) slider.getSize().width;
     }
 
+    @Step
     private Double getCurrentPosition(int slider) {
         return parseDouble(sliders.get(slider).getCssValue("left")
                 .replaceAll("px", "")) / (getStep() / (STEPS - 1)) + 1;
 
     }
 
+    @Step
     public void setDragAndDropSliders(int fromNew, int toNew) {
         assertTrue(fromNew >= MIN_STEP && toNew <= MAX_STEP);
         assertTrue(fromNew >= MIN_STEP && toNew <= MAX_STEP);
@@ -79,6 +83,7 @@ public class DatesPage {
 
     }
 
+    @Step
     private void setPosition(Integer position, SelenideElement slider, Double currentPosition) {
         int xOffset = (int) ((position - currentPosition) * (getStep() / (STEPS - 1)));
         Actions action = new Actions(getWebDriver());
@@ -87,10 +92,12 @@ public class DatesPage {
 
     //================================checks===================================
 
+    @Step
     public void checkBrowserTitle() {
         assertEquals(getWebDriver().getTitle(), differentElementsPageBrowserTitle);
     }
 
+    @Step
     public void checkLog(int from, int to) {
 
         ElementsCollection neededRecords = logRecords.first(2);
@@ -104,6 +111,7 @@ public class DatesPage {
         }
     }
 
+    @Step
     private void checkLogRecord(String needed, int position, String category) {
         assertTrue(needed.contains(String.valueOf(position)));
         assertTrue(needed.contains(category));

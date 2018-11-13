@@ -57,11 +57,6 @@ public class HomePageAllure {
     }
 
     @Step
-    public void checkBrowserTitle() {
-        assertEquals(getWebDriver().getTitle(), homePageBrowserTitle);
-    }
-
-    @Step
     public void login(Users user) {
         profileButton.click();
         login.sendKeys(user.login);
@@ -79,7 +74,17 @@ public class HomePageAllure {
         leftDropDownElements.get(section.ordinal()).click();
     }
 
+    @Step
+    public void chooseServiceOption(ServiceDropDowns option) {
+        serviceHeaderDropDownElements.get(option.ordinal()).click();
+    }
+
     //================================checks===================================
+
+    @Step
+    public void checkBrowserTitle() {
+        assertEquals(getWebDriver().getTitle(), homePageBrowserTitle);
+    }
 
     @Step
     public void checkUserName(Users user) {
@@ -99,9 +104,4 @@ public class HomePageAllure {
         serviceLeftDropDownElements.shouldHave(exactTexts(getServiceDropDownsTitles()));
     }
 
-
-    @Step
-    public void chooseServiceOption(ServiceDropDowns option) {
-        serviceHeaderDropDownElements.get(option.ordinal()).click();
-    }
 }
