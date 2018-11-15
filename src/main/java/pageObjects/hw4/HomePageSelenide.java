@@ -69,7 +69,6 @@ public class HomePageSelenide {
         submit.click();
     }
 
-
     @Step
     public void clickOnHeader(HeaderSections section) {
         navigationElements.get(section.ordinal()).click();

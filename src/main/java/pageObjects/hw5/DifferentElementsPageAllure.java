@@ -89,26 +89,22 @@ public class DifferentElementsPageAllure {
         assertEquals(getWebDriver().getTitle(), differentElementsPageBrowserTitle);
     }
 
-    @Step
     private void checkCheckboxesExist() {
         for (SelenideElement box : checkBoxes) {
             box.shouldBe(Condition.visible);
         }
     }
 
-    @Step
     private void checkRadiosExist() {
         for (SelenideElement radio : radioButtons) {
             radio.shouldBe(Condition.visible);
         }
     }
 
-    @Step
     private void checkDropdownExist() {
         dropDown.shouldBe(Condition.visible);
     }
 
-    @Step
     private void checkButtonsExist() {
         button.shouldBe(Condition.visible);
         defaultButton.shouldBe(Condition.visible);
@@ -152,7 +148,6 @@ public class DifferentElementsPageAllure {
         }
     }
 
-    @Step
     private void checkLog(String log, String value, String condition) {
         assertTrue(log.contains(value));
         assertTrue(log.contains(condition));

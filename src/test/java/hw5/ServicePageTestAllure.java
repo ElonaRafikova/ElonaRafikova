@@ -4,7 +4,6 @@ import base.SelenideTestBase;
 import enums.HeaderSections;
 import enums.LeftSections;
 import io.qameta.allure.Feature;
-import io.qameta.allure.Flaky;
 import io.qameta.allure.Story;
 import listeners.AllureAttachmentListener;
 import org.testng.annotations.BeforeClass;
@@ -37,7 +36,6 @@ public class ServicePageTestAllure extends SelenideTestBase {
         differentElementsPage = page(DifferentElementsPageAllure.class);
     }
 
-    @Flaky
     @Test
     public void servicePageInterfaceTest() {
 

@@ -33,12 +33,10 @@ public class DatesPage {
 
     //================================methods===================================
 
-    @Step
     private Double getStep() {
         return (double) slider.getSize().width;
     }
 
-    @Step
     private Double getCurrentPosition(int slider) {
         return parseDouble(sliders.get(slider).getCssValue("left")
                 .replaceAll("px", "")) / (getStep() / (STEPS - 1)) + 1;
@@ -83,7 +81,6 @@ public class DatesPage {
 
     }
 
-    @Step
     private void setPosition(Integer position, SelenideElement slider, Double currentPosition) {
         int xOffset = (int) ((position - currentPosition) * (getStep() / (STEPS - 1)));
         Actions action = new Actions(getWebDriver());
@@ -111,7 +108,6 @@ public class DatesPage {
         }
     }
 
-    @Step
     private void checkLogRecord(String needed, int position, String category) {
         assertTrue(needed.contains(String.valueOf(position)));
         assertTrue(needed.contains(category));
